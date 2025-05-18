@@ -9,7 +9,7 @@
     <meta name="resource-type" content="document">
     <meta name="distribution" content="global">
     <meta name="KeyWords" content="Conference">
-    <title>CPS-IoT Week 2022</title>
+    <title>CPS-IoT Week 2025</title>
     <script type="text/javascript">
         var slideIndex = 0
         var auto = true
@@ -22,6 +22,7 @@
                 clearTimeout(timer)
                 auto = true
             }
+
 
             var slides = document.getElementsByClassName("slide");
             var dots = document.getElementsByClassName("dot");
@@ -43,10 +44,47 @@
             timer = setTimeout(showSlides, 12000);
         }
 
+        var slideIndex1 = 0
+        function showSlides1() {
+            // if (typeof showSlides.idx == 'undefined') {
+            //     showSlides.idx = 0;
+            // }
+            if (auto == false) {
+                clearTimeout(timer)
+                auto = true
+            }
+
+
+            var slides = document.getElementsByClassName("slide1");
+            // var dots = document.getElementsByClassName("dot");
+            if (slideIndex1 > (slides.length - 1)) {
+                slideIndex1 = 0
+            }
+            if (slideIndex1 < 0) {
+                slideIndex1 = slides.length - 1
+            }
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            // for (i = 0; i < dots.length; i++) {
+            //     dots[i].className = dots[i].className.replace(" active", "");
+            // }
+            slides[slideIndex1].style.display = "inline-block";
+            // dots[slideIndex1].className += " active"
+            slideIndex1++;
+            timer = setTimeout(showSlides1, 12000);
+        }
+
         function plusSlides(n) {
           slideIndex += n - 1
           auto = false
           showSlides()
+        }
+
+        function plusSlides1(n) {
+          slideIndex += n - 1
+          auto = false
+          showSlides1()
         }
 
         function currentSlide(n) {
@@ -54,8 +92,15 @@
             auto = false
             showSlides()
         }
+
+        function currentSlide1(n) {
+            slideIndex = n
+            auto = false
+            showSlides1()
+        }
         function init() {
             showSlides()
+            showSlides1()
         }
     </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -72,11 +117,11 @@
     <div class="container">
         <div class="head row text-center" style="background: #fafafa">
             <div class="col-lg-2">
-                <img src="assets/logo.PNG" alt="Conference Template Banner" class="img-fluid" max-height="120px">
+                <img src="assets/logo2025.png" alt="Conference Template Banner" class="img-fluid" max-height="120px">
             </div>
             <div class="col-lg-10 pt-3">
                 <div class="top-right">
-                  The 3<sup>rd</sup> Student Design Competition on Networked Computing on the Edge
+                  The 4<sup>th</sup> Student Design Competition on Networked Computing on the Edge
                 </div>
             </div>
         </div>
@@ -87,13 +132,13 @@
                 <img src="./assets/slide1.PNG" class="img-fluid w-100">
             </div>
             <div class="slide">
-                <img src="./assets/price1_2022.PNG" class="img-fluid w-100">
+                <img src="./assets/winner1_2024.png" class="img-fluid w-100">
             </div>
             <div class="slide">
-                <img src="./assets/price2_2022.PNG" class="img-fluid w-100">
+                <img src="./assets/winner2_2024.png" class="img-fluid w-100">
             </div>
             <div class="slide">
-                <img src="./assets/price3_2022.PNG" class="img-fluid w-100">
+                <img src="./assets/winner3_2024.png" class="img-fluid w-100">
             </div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -109,44 +154,42 @@
             <table class="navigation">
                 <tr>
                     <td class="navigation">
-                        <a  title="Conference Home Page" href="./index.html">Home</a>
+                        <a class="current" title="Conference Home Page" href="./index.html">Home</a>
                     </td>
-
                     <td class="navigation">
                         <a title="Conference Program" href="./program_index.html">Program</a>
                     </td>
-
                     <td class="navigation">
-                        <a class="current" title="Conference Winner" href="./winner_index.html">Winners</a>
+                        <a title="Conference Winner" href="./winner_index.html">Winners</a>
                     </td>
-
                 </tr>
             </table>
+
+
+
 <table style="width:80%;padding:0px;left:-180px;border:0px;border-spacing:80px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
   <tr>
   <td style="float:left; position: relative; left:-240px;width:25%;vertical-align:middle">
     <p style= "font-size: 2.00em;"><strong>The First Place Winner</strong></p>
     <!-- <font color="red"><strong>The Second Price Winner</strong></font> -->
-      <img src='assets/price1_new.PNG' width="550"></div>
+      <img src='2025winner/winner1.jpg' width="550"></div>
           </td>
   <td style="float:left; position: relative; top:50px; left:100px; width:75%;">
     <p style= "line-height: 1.1; font-size: 2.00em;">
   <br>
     <strong>
-      Daniel D'Souza, Mehrdad Kiamari, Lillian Clark, Jared Coleman
+      Sanket Lokhande, Christopher Mengu, Hao Xu
     </strong>
     </p>
     <p style= "font-size: 1.53em;">
     <br>
-      University of Southern California
+      University of Nevada, Reno
     <br>
     <br>
     </p>
     <p style= "font-size: 1.53em; font-style: italic;">
-          <strong>"Graph Convolutional Network-based Scheduler for
-Distributing Computation in the Internet of Robotic
-Things"</strong>
+          <strong>"Enhancing First-Person View UAVs with Cost-Effective FPV Goggles"</strong>
       <br>
           </p>
   </td>
@@ -157,25 +200,23 @@ Things"</strong>
 <td style="float:left; position: relative; left:-240px;width:25%;vertical-align:middle">
   <p style= "font-size: 2.00em;"><strong>The Second Place Winner</strong></p>
   <!-- <font color="red"><strong>The Second Price Winner</strong></font> -->
-    <img src='assets/price2_new.PNG' width="550"></div>
+    <img src='2025winner/winner2.png' width="550"></div>
         </td>
 <td style="float:left; position: relative; top:50px; left:100px; width:75%;">
   <p style= "line-height: 1.1; font-size: 2.00em;">
 <br>
   <strong>
-    Sam Jijina, Jun Chen, Zhen Jiang, Ashutosh Dhekne, Hyesoon Kim
+    Brian Mercado, Daniel Luna, George Rodriguez, Michael Lanfranchi, Yu Bai
   </strong>
   </p>
   <p style= "font-size: 1.53em;">
   <br>
-    Georgia Institute of Technology
+    California State University, Fullerton
   <br>
   <br>
   </p>
   <p style= "font-size: 1.53em; font-style: italic;">
-        <strong>"Mobility Patterns to Optimize Communication for
-Distributed Capture Processing Onboard Autonomous
-UAVs"</strong>
+        <strong>"Autonomous Agricultural Maintenance and Analysis Rover (AAMAR)"</strong>
     <br>
         </p>
 </td>
@@ -184,28 +225,55 @@ UAVs"</strong>
 
 <tr>
 <td style="float:left; position: relative; left:-240px; width:25%;vertical-align:middle">
-      <p style= "font-size: 2.00em;"><strong>The Third Place Winner</strong></p>
-    <img src='assets/price3_new.PNG' width="550"></div>
+      <p style= "font-size: 2.00em;"><strong>The Third Place Winner 1</strong></p>
+    <img src='2025winner/winner3_1.png' width="550"></div>
         </td>
 <td style="float:left; position: relative; top:10px; left:100px; width:75%;">
   <p style= "font-size: 2.00em;">
 <br>
 <strong>
-  Peixuan Shu, Zhexin Shi, Zhaolong Yang, Jintong Yu, Zhiyan Zhou,
-  Yiyang Chen, Changhai Wang, Xiwang Dong, Yongzhao Hua
+  Ty Runner, Larry Garcia, Baris Aksanli
 </strong>
 </p>
 <p style= "font-size: 1.53em;">
 <br>
-  Beihang University
+  San Diego State University
 <br>
 <br>
 </p>
 <p style= "font-size: 1.53em; font-style: italic;">
-<strong>"Heterogeneous UAV-UGV swarm experiment platform for
-cooperative mission"</strong>
+<strong>"Dimensionality leap of 2D LiDAR"</strong>
 <br>
 </p>
+
+
+</td>
+</tr>
+
+
+<tr>
+<td style="float:left; position: relative; left:-240px; width:25%;vertical-align:middle">
+      <p style= "font-size: 2.00em;"><strong>The Third Place Winner 2</strong></p>
+    <img src='2025winner/winner3_2.jpg' width="550"></div>
+        </td>
+<td style="float:left; position: relative; top:10px; left:100px; width:75%;">
+  <p style= "font-size: 2.00em;">
+<br>
+<strong>
+  Daniel Donelon, Alan Kernin, Marc Oliza, Alexander Romero, Yu Bai
+</strong>
+</p>
+<p style= "font-size: 1.53em;">
+<br>
+  California State University, Fullerton
+<br>
+<br>
+</p>
+<p style= "font-size: 1.53em; font-style: italic;">
+<strong>"A Cyber-Physical System for Automated Beverage Preparation: The Robotic Cocktail Maker"</strong>
+<br>
+</p>
+
 
 </td>
 </tr>
@@ -213,25 +281,24 @@ cooperative mission"</strong>
 
 <tr>
 <td style="float:left; position: relative; left:-240px;width:25%;vertical-align:middle">
-  <p style= "font-size: 2.00em;"><strong>Honorable Mention-Demo</strong></p>
-    <img src='assets/o1.PNG' width="550"></div>
+  <p style= "font-size: 2.00em;"><strong>Honorable Mention 1</strong></p>
+    <img src='2025winner/honorable1.png' width="550"></div>
         </td>
 <td style="float:left; position: relative; top:50px; left:100px; width:75%;">
   <p style= "line-height: 1.1; font-size: 2.00em;">
 <br>
 <strong>
-  Bhagawat Yedla, Md Rafiul Kabir, Darshith M Prakash, Venkata Sai Gireesh C,
-  Sandip Ray
+  Jaime Carpio, Gustavo Martinez, Mark Strong, Jose Villicana, Yu Bai
 </strong>
 </p>
 <p style= "font-size: 1.53em;">
 <br>
-  University of Florida
+  California State University, Fullerton 
 <br>
 <br>
 </p>
 <p style= "font-size: 1.53em; font-style: italic;">
-<strong>"AutoHaL: Hands on Exploration of Vulnerabilities in Automotive Systems"</strong>
+<strong>"Robotic Solar Panel Cleaner"</strong>
 <br>
 </p>
 </td>
@@ -240,34 +307,33 @@ cooperative mission"</strong>
 
 <tr>
 <td style="float:left; position: relative; left:-240px;width:25%;vertical-align:middle">
-  <p style= "font-size: 2.00em;"><strong>Honorable Mention-Social Impact</strong></p>
-    <img src='assets/o2.PNG' width="550"></div>
+  <p style= "font-size: 2.00em;"><strong>Honorable Mention 2</strong></p>
+    <img src='2025winner/honorable2.png' width="550"></div>
         </td>
 <td style="float:left; position: relative; top:50px; left:100px; width:75%;">
   <p style= "line-height: 1.1; font-size: 2.00em;">
   <br>
   <strong>
-    Evan Wiseman, Will Strotz, Matt Facque, Zach Cook, Jacob
-    Bercovich, Sanket Lokhande
+    Zhengquan Li, Prateek Rai Srivastav, Zheng Song
   </strong>
   </p>
   <p style= "font-size: 1.53em;">
   <br>
-University of Nevada, Reno
+University of Michigan-Dearborn
   <br>
   <br>
   </p>
   <p style= "font-size: 1.53em; font-style: italic;">
-  <strong>"EDGE Fire Fighting System"</strong>
+  <strong>"Federated Recommendation Systems on Personal Home Routers"</strong>
   <br>
   </p>
 </td>
 </tr>
 
 
-<tr>
+<!-- <tr>
 <td style="float:left; position: relative; left:-240px;width:25%;vertical-align:middle">
-  <p style= "font-size: 2.00em;"><strong>Honorable Mention-Originality</strong></p>
+  <p style= "font-size: 2.00em;"><strong>Highlights</strong></p>
     <img src='assets/o3.PNG' width="550"></div>
         </td>
 <td style="float:left; position: relative; top:50px; left:100px; width:75%;">
@@ -315,10 +381,47 @@ Following Model"</strong>
   </p>
 </td>
 </tr>
-
+ -->
 
 
 </table>
+
+
+        <div class="slideshow-container row mt-3 p-0 text-center">
+            <div class="slide1">
+                <img src="./highlights/IMG_4718-min.JPG" class="img-fluid w-100">
+            </div>
+            <div class="slide1">
+                <img src="./highlights/IMG_4723-min.JPG" class="img-fluid w-100">
+            </div>
+            <div class="slide1">
+                <img src="./highlights/IMG_4737-min.JPG" class="img-fluid w-100">
+            </div>
+            <div class="slide1">
+                <img src="./highlights/IMG_4751-min.JPG" class="img-fluid w-100">
+            </div>
+            <div class="slide1">
+                <img src="./highlights/IMG_4757-min.JPG" class="img-fluid w-100">
+            </div>
+            <div class="slide1">
+                <img src="./highlights/IMG_4766-min.JPG" class="img-fluid w-100">
+            </div>
+            <div class="slide1">
+                <img src="./highlights/IMG_4772-min.JPG" class="img-fluid w-100">
+            </div>
+            <a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides1(1)">&#10095;</a>
+        </div>
+<!-- 
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide1(0)"></span>
+          <span class="dot" onclick="currentSlide1(1)"></span>
+          <span class="dot" onclick="currentSlide1(2)"></span>
+          <span class="dot" onclick="currentSlide1(3)"></span>
+          <span class="dot" onclick="currentSlide1(4)"></span>
+          <span class="dot" onclick="currentSlide1(5)"></span>
+          <span class="dot" onclick="currentSlide1(6)"></span>
+        </div> -->
 
 </body>
 
